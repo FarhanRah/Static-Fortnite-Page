@@ -1,0 +1,135 @@
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    padding: 5px 25px;
+    z-index: 2;
+}
+
+.topnav a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.topnav a:hover {
+    background-color: white;
+    color: black;
+}
+
+.topnav div h2 {
+    font-family: 'Ranchers', cursive;
+    color: white;
+    letter-spacing: 3px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+.banner {
+    padding-top: 60px;
+    background: url(https://i.pinimg.com/originals/1a/33/a6/1a33a62c9d3e9cfb56c402f81bdf0373.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.body {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* position: absolute;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /*text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 35%; */
+    /* bottom: 35%;
+    left: 33%; */
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: white;
+    font-family: 'Ranchers', cursive;
+    animation: fade 2s linear forwards;
+}
+
+/* .body {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+} */
+
+.body h3 {
+    font-size: 4rem;
+}
+
+.body h1 {
+    font-size: 7rem;
+}
+
+.banner::after {
+    content: "";
+    background-color: rgb(135, 135, 182);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.test {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    height: 2.8rem;
+    color: white;
+    padding-top: 5px;
+    z-index: 2;
+}
+
+@media (max-width: 800px) {
+    .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topnav div:nth-of-type(3) {
+        padding-bottom: 8px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .itemm {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@keyframes fade{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
